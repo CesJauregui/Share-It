@@ -38,6 +38,11 @@ class AuthController extends Controller
         // Alta del usuario (save)
         $user = User::create([
             'name' => $request->name,
+            'last_name' => $request->last_name,
+            'profession' => $request->profession,
+            'work' => $request->work,
+            'city' => $request->city,
+            'birthdate' => $request->birthdate,
             'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
